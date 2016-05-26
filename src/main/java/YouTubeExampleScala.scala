@@ -7,7 +7,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.SparkContext._
 
 
-object WordCountScala {
+object YouTubeExampleScala {
 
 
   //val sc = new SparkContext("local","jobName","sparkHome",Seq("job.jar"))
