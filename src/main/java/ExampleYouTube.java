@@ -14,13 +14,16 @@ import java.util.Arrays;
 public class ExampleYouTube {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
 
 
         System.out.println("booms");
 
 
         SparkConf conf = new SparkConf().setAppName("org.sparkexample.WordCount").setMaster("local");
+
+
+
         JavaSparkContext context = new JavaSparkContext(conf);
 
         JavaRDD<String> lines = context.textFile("src/main/resources/sample_error_log.log");
@@ -34,6 +37,9 @@ public class ExampleYouTube {
 
 
         ).count();
+
+
+
 
         System.out.println("Number of error log messages " + totalErrors);
 
@@ -69,8 +75,17 @@ public class ExampleYouTube {
                 }));
 
         //System.out.println(pets.groupBy());
+        Thread.sleep(300000);
 
+        /*
+            during this time observe
+                http://localhost:4040/jobs/ - see the jon named "count" there
+                this is the first time we actually ran a jon - everything
+                up to this point was defining transformations.
 
+                Each time we perform an operation on an RDD it is submitted
+                as a separate job
+         */
 
     }
 

@@ -228,6 +228,7 @@ Same result
     // for large rdd's better to just print a subset
     b.take(3).foreach(println)
 
+    Thread.sleep(300000);
     System.out.println("finished")
 
   }
