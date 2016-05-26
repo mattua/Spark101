@@ -1,0 +1,5 @@
+ERROR   Foo foo error occurred  OOPS
+WARN    Foo warning watch out
+INFO    Info    FYI
+ERROR   Bar bar error occurred  OOPS
+
