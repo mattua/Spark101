@@ -45,7 +45,7 @@ public class ExampleYouTube {
 
 
         // create an RDD from a List
-        JavaRDD<Integer> nums = context.parallelize(Arrays.asList(new Integer[]{1, 2, 3}));
+        JavaRDD<Integer> nums = context.parallelize(Arrays.asList(1, 2, 3));
 
         System.out.println("retrived as local collection "+ nums.collect());
 
@@ -68,11 +68,9 @@ public class ExampleYouTube {
         //nums.saveAsTextFile("nums.txt");   // saves as folder, skip for now
 
         JavaRDD<Tuple2> pets = context.parallelize(Arrays.asList(
-                new Tuple2[]{
-                        new Tuple2("cat", 1),
-                        new Tuple2("dog", 1),
-                        new Tuple2("cat", 2)
-                }));
+                new Tuple2("cat", 1),
+                new Tuple2("dog", 1),
+                new Tuple2("cat", 2)));
 
         //System.out.println(pets.groupBy());
         Thread.sleep(300000);
