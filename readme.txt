@@ -3,4 +3,5 @@
     Maven
 
 
-2.
+2. make sure the src/main/java and src/main/scala folders are both on the project
+    source directory under module settings
